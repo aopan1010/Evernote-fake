@@ -2,6 +2,15 @@
 <?php
 include_once "../common/header.php";
 session_start();
+
+// ---------- ここから追加する -------------
+require '../common/auth.php';
+
+if(isLogin()) {
+    header('Location: ../memo/');
+    exit;
+}   
+
 echo getHeader("ユーザー登録");
 
 ?>
