@@ -21,7 +21,7 @@ try {
     $_SESSION['select_memo'] = [
         'id' => $database_handler->lastInsertId(),
         'title' => $title,
-        $statement => '',
+        'content' => '',
     ];
 } catch (Throwable $e) {
     echo $e->getMessage();
